@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cinemas</title>
+    <link th:href="@{/styles/playsTemplate.css}" rel="stylesheet" />
+</head>
+<body>
+<h1><span>Cinemas</span></h1>
+
+<table class="base" >
+    <th>Cinemas</th>
+    <span th:if="${movie}" th:text=" 'where ' +${movie.name}+ 'is played '"></span>
+
+
+    <tr th:each="c:${cinemas}">
+        <td th:text="${c}">
+            Cinema
+        </td>
+        <td>
+
+            <button class="basebutton"> Show details</button>
+        </td>
+
+    </tr>
+</table>
+</body>
+</html>
