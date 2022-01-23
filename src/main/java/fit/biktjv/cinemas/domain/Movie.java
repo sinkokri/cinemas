@@ -9,13 +9,13 @@ public class Movie {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     @Column(name = "m_id")
-    private Long id;
+    Long id;
+
+    @Column(name = "m_name", nullable = false)
+    String name;
 
     @Column(nullable = false)
-    private String m_name;
-
-    @Column(nullable = false)
-    private Integer year;
+    Integer year;
 
     @OneToMany(mappedBy = "movie")
     Set<Play> plays;
@@ -23,8 +23,8 @@ public class Movie {
     public Movie() {
     }
 
-    public Movie(String m_name, Integer year) {
-        this.m_name = m_name;
+    public Movie(String name, Integer year) {
+        this.name = name;
         this.year = year;
     }
 
@@ -42,11 +42,11 @@ public class Movie {
     }
 
     public String getM_name() {
-        return m_name;
+        return name;
     }
 
-    public void setM_name(String m_name) {
-        this.m_name = m_name;
+    public void setM_name(String name) {
+        this.name = name;
     }
 
     public Integer getYear() {
@@ -58,6 +58,6 @@ public class Movie {
     }
 
     public String toString() {
-        return String.format("Movie %s with id %d, filmed in year %d", m_name, id, year);
+        return String.format("%s (%d)", name, year);
     }
 }

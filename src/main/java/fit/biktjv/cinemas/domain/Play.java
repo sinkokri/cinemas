@@ -20,11 +20,11 @@ public class Play {
     Movie movie;
 
     @Column
-    private Integer month;
+    Integer month;
     @Column
-    private Integer year;
+    Integer year;
     @Column
-    private Integer day;
+    Integer day;
 
     public Play() {
     }

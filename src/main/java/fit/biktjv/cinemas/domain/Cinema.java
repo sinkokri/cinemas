@@ -10,19 +10,19 @@ public class Cinema {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     @Column(name = "c_id")
-    private Long id;
+    Long id;
 
     @Column(name = "c_name", nullable = false)
-    private String name;
+    String name;
 
     @Column(nullable = false)
-    private String street;
+    String street;
 
     @Column(nullable = false)
-    private String city;
+    String city;
 
     @Column(nullable = false)
-    private Integer building;
+    Integer building;
 
     @OneToMany(mappedBy = "cinema")
     Set<Play> plays;
@@ -83,6 +83,6 @@ public class Cinema {
     }
 
     public String toString() {
-        return String.format("Cinema id %d - %s, located in %s, %s, %d", id, name, city, street, building);
+        return String.format("Cinema: %s, located in %s, %s, %d", name, city, street, building);
 }
 }
