@@ -50,11 +50,11 @@ public class Cinema {
         this.id = id;
     }
 
-    public String getC_name() {
+    public String getName() {
         return name;
     }
 
-    public void setC_name(String c_name) {
+    public void setName(String c_name) {
         this.name = c_name;
     }
 

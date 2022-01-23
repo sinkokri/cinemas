@@ -12,7 +12,7 @@ public interface PlayDAO {
 
     PlayKey createPlay(Play play);
 
-    Collection<Movie> allMoviesPlayed();
+//    List<Movie> allMoviesPlayed();
 
     Optional<Play> findById(Long movieId, Long cinemaId);
 }

@@ -22,10 +22,10 @@ public class PlayResource {
     @Autowired
     PlayDAO playDAO;
 
-    @GetMapping
-    public Collection<Movie> allMoviesPlayed() {
-        return playDAO.allMoviesPlayed();
-    }
+//    @GetMapping
+//    public Collection<Movie> allMoviesPlayed() {
+//        return playDAO.allMoviesPlayed();
+//    }
 
 //    @GetMapping("{cinema_id, movie_id}")
 //    public Play play (@PathVariable("cinema_id") Long id) {

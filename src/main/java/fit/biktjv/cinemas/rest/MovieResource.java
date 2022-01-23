@@ -31,4 +31,9 @@ public class MovieResource {
         return movieDAO.findById(id).get();
     }
 
+    @GetMapping("/played")
+    public List<Movie> findAllMoviesPlayed() {
+        return movieDAO.findAllMoviesPlayed();
+    }
+
 }

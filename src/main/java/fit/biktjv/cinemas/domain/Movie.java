@@ -41,11 +41,11 @@ public class Movie {
         this.id = id;
     }
 
-    public String getM_name() {
+    public String getName() {
         return name;
     }
 
-    public void setM_name(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 

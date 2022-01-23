@@ -2,7 +2,6 @@ package fit.biktjv.cinemas.web;
 
 
 import fit.biktjv.cinemas.integration.MovieDAO;
-import fit.biktjv.cinemas.integration.PlayDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,7 +12,7 @@ import java.time.LocalDate;
 
 @Controller
 @RequestMapping("/movies")
-public class PlaysWebResource {
+public class MoviesWebResource {
 
     @Autowired
     MovieDAO movieDAO;
@@ -23,7 +22,7 @@ public class PlaysWebResource {
     public String allPlays(Model model){
         model.addAttribute("movies", movieDAO.findAllMoviesPlayed());
         model.addAttribute("localDate", LocalDate.now());
-        return "playsTemplate";
+        return "moviesTemplate";
     }
 
 }

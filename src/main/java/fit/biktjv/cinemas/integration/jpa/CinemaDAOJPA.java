@@ -1,6 +1,7 @@
 package fit.biktjv.cinemas.integration.jpa;
 
 import fit.biktjv.cinemas.domain.Cinema;
+import fit.biktjv.cinemas.domain.Movie;
 import fit.biktjv.cinemas.integration.CinemaDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -31,6 +32,18 @@ public class CinemaDAOJPA implements CinemaDAO {
     @Transactional
     public Optional<Cinema> findById(Long cinemaId) {
         return cinemaJPARep.findById(cinemaId);
+    }
+
+    @Override
+    @Transactional
+    public List<Cinema> findAllUniqueCinemasPerName() {
+        return cinemaJPARep.findAllUniqueCinemasPerName();
+    }
+
+    @Override
+    @Transactional
+    public List<Cinema> cinemaPerMovie(Long movieId) {
+        return cinemaJPARep.cinemaPerMovie(movieId.toString());
     }
 
 }

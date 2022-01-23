@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movies</title>
+    <link th:href="@{/styles/playsTemplate.css}" rel="stylesheet" />
+</head>
+<body>
+<h1><span>Movies played today, </span>
+    <span th:text="${#temporals.format(localDate, 'DD-MM-yyyy')}"></span></h1>
+
+<a href="/cinemas">
+    <button>Show our all cinemas</button>
+</a>
+
+<table class="base" >
+    <th>Movies</th>
+    <th>Year</th>
+    <tr th:each="m:${movies}">
+        <td th:text="${m.name}">
+            Movie
+        </td>
+        <td th:text="${m.year}">
+            Year
+        </td>
+        <td>
+            <a href="/cinemas" th:href="'/cinemas?movieId='+ ${m.id}">
+            <button class="basebutton"> Show details</button>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

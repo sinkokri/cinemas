@@ -32,4 +32,10 @@ public class MovieDAOJPA implements MovieDAO {
     public Optional<Movie> findById(Long movieId) {
         return movieJPARep.findById(movieId);
     }
+
+    @Override
+    @Transactional
+    public List<Movie> findAllMoviesPlayed() {
+        return movieJPARep.findAllMoviesPlayed();
+    }
 }

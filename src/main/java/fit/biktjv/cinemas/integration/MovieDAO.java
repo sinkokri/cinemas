@@ -10,6 +10,8 @@ public interface MovieDAO {
 
     List<Movie> allMovies();
 
+    List<Movie> findAllMoviesPlayed();
+
     Optional<Movie> findById(Long movieId);
 
 }

@@ -26,11 +26,11 @@ public class PlayDAOJPA implements PlayDAO {
         return playJPARep.save(play).getId();
     }
 
-    @Override
-    @Transactional
-    public Collection<Movie> allMoviesPlayed() {
-        return playJPARep.findAllMoviesPlayed();
-    }
+//    @Override
+//    @Transactional
+//    public List<Movie> allMoviesPlayed() {
+//        return playJPARep.findAllMoviesPlayed();
+//    }
 
     @Override
     @Transactional
